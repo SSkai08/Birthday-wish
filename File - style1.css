@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    animation: colorBlink 10s infinite;
+}
+
+@keyframes colorBlink {
+    0% { background-color: #ffc1cc; }
+    25% { background-color: #ffb6c1; }
+    50% { background-color: #ff69b4; }
+    75% { background-color: #ffb3ba; }
+    100% { background-color: #ffc1cc; }
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 15px;
+    z-index: 2;
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    border: 5px solid #ff69b4;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: textBlink 2s infinite alternate;
+}
+
+@keyframes textBlink {
+    0% { color: #f00; }
+    20% { color: #ffa500; }
+    40% { color: #ff0; }
+    60% { color: #0f0; }
+    80% { color: #00f; }
+    100% { color: #4b0082; }
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.fade {
+    animation: fade 3s infinite;
+}
+
+@keyframes fade {
+    from { opacity: 0.4; } 
+    to { opacity: 1; }
+}
+
+.love-icons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.emoji {
+    font-size: 50px;
+    opacity: 0.5;
+    position: absolute;
+    animation: float 10s infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+.emoji:nth-child(1) { top: 10%; left: 20%; }
+.emoji:nth-child(2) { top: 30%; left: 50%; }
+.emoji:nth-child(3) { top: 50%; left: 70%; }
+.emoji:nth-child(4) { top: 70%; left: 40%; }
+.emoji:nth-child(5) { top: 90%; left: 60%; }
+.emoji:nth-child(6) { top: 20%; left: 80%; }
+
+.falling-emojis {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.falling-emojis .emoji {
+    font-size: 40px;
+    opacity: 0.7;
+    animation: fall 10s infinite;
+}
+
+@keyframes fall {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100vh); }
+}
+
+.falling-emojis .emoji:nth-child(1) { left: 10%; animation-delay: 0s; }
+.falling-emojis .emoji:nth-child(2) { left: 20%; animation-delay: 1s; }
+.falling-emojis .emoji:nth-child(3) { left: 30%; animation-delay: 2s; }
+.falling-emojis .emoji:nth-child(4) { left: 40%; animation-delay: 3s; }
+.falling-emojis .emoji:nth-child(5) { left: 50%; animation-delay: 4s; }
+.falling-emojis .emoji:nth-child(6) { left: 60%; animation-delay: 5s; }
+.falling-emojis .emoji:nth-child(7) { left: 70%; animation-delay: 6s; }
+.falling-emojis .emoji:nth-child(8) { left: 80%; animation-delay: 7s; }
+.falling-emojis .emoji:nth-child(9) { left: 90%; animation-delay: 8s; }
+.falling-emojis .emoji:nth-child(10) { left: 100%; animation-delay: 9s; }
